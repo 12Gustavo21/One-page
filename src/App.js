@@ -10,7 +10,13 @@ import Gift from "./assets/img/gift.svg";
 //Json
 import Cards from "./cards.json";
 
+//Aos library
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+
 export default function App() {
+
   const [cards, setCards] = useState([]);
 
   const getCards = () => {
@@ -29,6 +35,10 @@ export default function App() {
     const year = new Date().getFullYear();
     return year;
   }
+
+  useEffect(() => {
+    AOS.init();
+  });
 
   return (
     <>
@@ -53,17 +63,33 @@ export default function App() {
           </S.HeaderFigure>
         </S.HeaderContainer>
       </S.Header>
-      <main>
-        <section>
-          {cards.map((card) => (
-            <section key={card.id}>
-              <section className={card.color}></section>
-              <h2>{card.title}</h2>
-              <p>{card.description}</p>
-            </section>
-          ))}
-        </section>
-      </main>
+      <S.Main>
+        <ScrollToTopButton />
+        <S.Cards>
+          <S.CardBox>
+            {cards.slice(0, 3).map((card) => (
+              <S.Card key={card.id} data-aos="fade-up" data-aos-duration="1000">
+                <S.Color className={card.color}></S.Color>
+                <S.Description>
+                  <h2>{card.title}</h2>
+                  <p>{card.description}</p>
+                </S.Description>
+              </S.Card>
+            ))}
+          </S.CardBox>
+          <S.CardBox>
+            {cards.slice(3, 6).map((card) => (
+              <S.Card key={card.id} data-aos="fade-up" data-aos-duration="1000">
+                <S.Color className={card.color}></S.Color>
+                <S.Description>
+                  <h2>{card.title}</h2>
+                  <p>{card.description}</p> 
+                </S.Description>
+              </S.Card>
+            ))}
+          </S.CardBox>
+        </S.Cards>
+      </S.Main>
       <footer>
         <form>
           <section>

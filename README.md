@@ -11,6 +11,7 @@
 
 + ReactJS ⚛️
 + Styled-components 💅
++ AOS (Animate On Scroll) 📈
 
 ### How to use
  
