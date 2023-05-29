@@ -1,0 +1,33 @@
+[
+    {
+        "id": "1",
+        "color": "red",
+        "title": "Título do card",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl."
+    }, {
+        "id": "2",
+        "color": "cyan",
+        "title": "Título do card",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl."
+    }, {
+        "id": "3",
+        "color": "magenta",
+        "title": "Título do card",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl."
+    }, {
+        "id": "4",
+        "color": "green",
+        "title": "Título do card",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl."
+    }, {
+        "id": "5",
+        "color": "yellow",
+        "title": "Título do card",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl."
+    }, {
+        "id": "6",
+        "color": "purple",
+        "title": "Título do card",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl."
+    }
+]
