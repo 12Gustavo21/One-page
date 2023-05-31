@@ -17,10 +17,16 @@ export const ButtonBox = styled.section`
         cursor: pointer;
         opacity: 0;
         z-index: 1;
+        transition: .5s all ease-in-out;
     }
 
     .scroll-to-top-button.visible {
         display: block;
         opacity: 1;
+    }
+
+    .scroll-to-top-button:hover {
+        background-color: #2F2E41;
+        color: #D7D4FF;
     }
 `;

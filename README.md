@@ -5,13 +5,14 @@
 ## Challenge [03] Codelândia - Iuri Silva
 >Look the design: https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO
 
-<img width ='600px' src ='...' />
+<img width ='600px' src ='./src/assets/gif/Recording.gif' />
 
 *Technologies*
 
 + ReactJS ⚛️
 + Styled-components 💅
 + AOS (Animate On Scroll) 📈
++ Font Awesome <img width="15px" src="https://fontawesome.com/images/favicon/icon.svg" /> 
 
 ### How to use
  

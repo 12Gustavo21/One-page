@@ -13,10 +13,11 @@ import Cards from "./cards.json";
 //Aos library
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+//Components
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function App() {
-
   const [cards, setCards] = useState([]);
 
   const getCards = () => {
@@ -40,13 +41,18 @@ export default function App() {
     AOS.init();
   });
 
+  //Go to top before reload
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <GlobalStyle />
       <S.Header>
         <S.HeaderContainer>
-          <S.Informations>
-            <S.TextBox>
+          <S.Informations >
+            <S.TextBox data-aos="fade-right" data-aos-duration="2000">
               <h1>
                 Lorem ipsum dolor <span>sit amet</span>
               </h1>
@@ -59,7 +65,7 @@ export default function App() {
             </S.TextBox>
           </S.Informations>
           <S.HeaderFigure>
-            <img src={Gift} alt="Gift" draggable="false" />
+            <img src={Gift} alt="Gift" draggable="false" data-aos="fade-left" data-aos-duration="2000"/>
           </S.HeaderFigure>
         </S.HeaderContainer>
       </S.Header>
@@ -83,27 +89,29 @@ export default function App() {
                 <S.Color className={card.color}></S.Color>
                 <S.Description>
                   <h2>{card.title}</h2>
-                  <p>{card.description}</p> 
+                  <p>{card.description}</p>
                 </S.Description>
               </S.Card>
             ))}
           </S.CardBox>
         </S.Cards>
       </S.Main>
-      <footer>
-        <form>
-          <section>
-            <h3>Entre em contato</h3>
-          </section>
-          <section>
-            <input type="text" placeholder="Nome" />
-            <input type="email" placeholder="E-mail" />
-            <input type="tel" placeholder="Telefone" />
-            <textarea placeholder="Mensagem" spellCheck="true"></textarea>
-            <button type="submit">Enviar</button>
-          </section>
-        </form>
-        <section>
+      <S.Footer>
+        <S.FormBox>
+          <S.Form>
+            <S.FormTitle data-aos="fade-up" data-aos-duration="1000">
+              <h3>Entre em contato</h3>
+            </S.FormTitle>
+            <S.FormContent data-aos="fade-up" data-aos-duration="1500">
+              <input type="text" placeholder="Nome" />
+              <input type="email" placeholder="E-mail" />
+              <input type="tel" placeholder="Telefone" />
+              <textarea placeholder="Mensagem..." spellCheck="true"></textarea>
+              <button type="submit">Enviar mensagem</button>
+            </S.FormContent>
+          </S.Form>
+        </S.FormBox>
+        <S.Copyright>
           <p>
             Copyright © {getCurrentYear()}
             <a
@@ -114,8 +122,8 @@ export default function App() {
               @iuricode
             </a>
           </p>
-        </section>
-      </footer>
+        </S.Copyright>
+      </S.Footer>
     </>
   );
 }
