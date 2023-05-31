@@ -1,6 +1,6 @@
 # One Page
 
-> Status : Unfinished project 🕰️ / Open PR
+> Status : Finished project ✅ / Open PR
 
 ## Challenge [03] Codelândia - Iuri Silva
 >Look the design: https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO
